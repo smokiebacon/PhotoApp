@@ -1,0 +1,14 @@
+<%- include('../partials/header') %>
+<main>
+<h1> Edit Page </h1>
+<form id="newForm" action="/photos/<%= photo._id %>?_method=PUT" method="POST">
+    <input type="text" name="name" placeholder="name" value="<%= photo.name%>">
+    <input type="text" name="location" placeholder="location" value="<%= photo.location%>">
+    <input type="text" name="date" placeholder="Date" value="<%= photo.date%>">
+    <input type="text" name="image" placeholder="Image Link" value="<%= photo.image%>">
+    <button type="submit" class="btn btn-success">Submit Photo Changes</button>
+</form>
+</main>
+
+
+<%- include('../partials/footer') %>

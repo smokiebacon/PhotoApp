@@ -1,0 +1,18 @@
+<%- include('../partials/header') %>
+
+<main>
+    <h1>Photo</h1>
+    <img src="<%= photo.image %>">
+    <li> This picture was taken at <%= photo.location %> </li>
+    <form action="/photos/<%= photo._id %>/edit" method="GET">
+        <button type="submit" class="btn-primary">Edit Photo Info</button>
+    </form>
+    <br>
+    <form action="/photos/<%= photo._id %>/?_method=DELETE" method="POST">
+        <button type="submit" class="btn-danger">Delete Photo</button>
+    </form>
+
+    
+    </main>
+
+<%- include('../partials/footer') %>

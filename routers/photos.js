@@ -8,19 +8,17 @@ router.get('/', photoControl.index);
 router.get('/new', photoControl.new);
 
 // //create, POSTing data to server
-// router.post('/', houseControl.create);
+router.post('/', photoControl.create);
 
 // //EDIT, GETing a form to show to edits
-// router.get('/:id/edit', houseControl.edit);
+router.get('/:id/edit', photoControl.edit);
 
 // //update PUTing data into the data
-// router.put('/:id/', houseControl.update);
-
-
-// //show which is //:id
-// router.get('/:id', houseControl.show);
-// //delete
-// router.delete('/:id', houseControl.delete);
+router.put('/:id', photoControl.update);
+//show which is //:id
+router.get('/:id', photoControl.show);
+//delete
+router.delete('/:id', photoControl.delete);
 
 
 

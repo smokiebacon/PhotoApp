@@ -1,9 +1,15 @@
 <%- include('../partials/header') %>
+
 <main>
-<h1> Index Page </h1>
-
-
-</main>
-
+    <h2>List of Photos</h2>
+    <ul>
+    <% photos.forEach(picture => { %>
+    <li><a href="/photos/<%= picture._id %>"><%= picture.name %> </a></li>
+    <% }) %>
+    </ul>
+    <form action="/photos/new" method="GET">
+    <button type="submit" >Create New Photo</button>
+    </form>
+    </main>
 
 <%- include('../partials/footer') %>
