@@ -1,0 +1,15 @@
+<%- include('../partials/header') %>
+
+<main>
+    <h2>List of Users</h2>
+    <ul>
+    <% users.forEach(picture => { %>
+    <li><a href="/users/<%= picture._id %>"><%= picture.name %> </a></li>
+    <% }) %>
+    </ul>
+    <form action="/users/new" method="GET">
+    <button type="submit" >Create New User</button>
+    </form>
+    </main>
+
+<%- include('../partials/footer') %>
